@@ -1,0 +1,26 @@
+<node>
+  <type>
+    <start>
+      //周目
+    </start>
+    <end>
+      
+    </end>
+    <label>
+      
+    </label>
+    <switch>
+      
+    </switch>
+    <action>
+      
+    </action>
+  </type>
+  <next>
+    
+  </next>
+  <source>
+    
+  </source>
+</node>
+//如何描述循环，是否要展开循环，是否允许循环，是一个问题
