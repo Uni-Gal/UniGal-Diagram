@@ -21,7 +21,12 @@
       
     </label>
     <switch>
-      
+      <condiation>
+        //填写这个分支的进入条件,顺序和nextlist里面一致
+      </condiation>
+      <condiation>
+        //填写这个分支的进入条件,顺序和nextlist里面一致
+      </condiation>
     </switch>
     <action operation="add"><!--此外还有sub,multiply,divide,square,not-->
       <var>
