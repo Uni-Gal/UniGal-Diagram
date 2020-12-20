@@ -1,0 +1,7 @@
+Render/.vs
+Render/x64
+Render/Debug
+Render/Release
+*.ipch
+*.pch
+*.suo
