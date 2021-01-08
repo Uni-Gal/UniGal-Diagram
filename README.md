@@ -1,7 +1,11 @@
 # UniGal-Diagram
 Offer a visuable way to switch and show the different possibility of a Galgame
 
+## UniGal-Diagram Simple
 
+Draw your diagram which in your mind!
+
+![](Simple/Simple_HelloWorld/Diagram_simple_SVG.svg)
 
 ## UniGal-Diagram的定位
 
@@ -17,32 +21,16 @@ UniGal-Diagram的目标，正是构建一套能描述绝大多数Galgame的游�
 
 
 
-UniGal-Diagram并未完全遵循基本的流程图的形式
+## UniGal-Diagram技术细节
 
-如它可以有多个开始点，分别对应不同的周目
+1.UniGal-Diagram并未完全遵循基本的流程图的形式，如它可以有多个开始点，分别对应不同的周目，它可以不必有IO节点等。
 
-它可以不必有IO节点等
+它对flag/好感变量的操作均理解为对全局变量的操作，它所有的块均为同样的节点，因此我们不进行形状上的划分，而仅在前端渲染的时候表示出他的不同来。
 
-它对flag/好感变量的操作均理解为对全局变量的操作
+2.为了保证通用，他的数据结构定义是通用的，需要根据不同的环境来写不同的渲染器，比如DiagramForUnity或者DiagramForOthers
 
-它所有的块均为同样的节点，因此我们不进行形状上的划分，而仅在前端渲染的时候表示出他的不同来
+3.允许线与线的交叉
 
+4.UUID用UUID5这样的基于hash的是最好，但是如果要现场生成我也不反对。不过在技术力不够的时候直接name判定也可以
 
-
-为了保证通用
-
-他的数据结构定义是通用的
-
-需要根据不同的环境来写不同的渲染器，比如DiagramForUnity或者DiagramForOthers
-
-
-
-允许线与线的交叉
-
-
-
-UUID用UUID5这样的基于hash的是最好，但是如果要现场生成我也不反对。不过在技术力不够的时候直接name判定也可以
-
-
-
-此外，即日起，UniGal的给电脑看的需要展示出来的注释用```<comment></comment>```封装，给人看的纯粹开发的时候方便了解是啥的，今后统一用```<!-- {{comment_content}} -->```写，就不要暴露出来给解析脚本的时候添麻烦了。已有的存量代码逐步实行更改。
+5.即日起，UniGal的给电脑看的需要展示出来的注释用```<comment></comment>```封装，给人看的纯粹开发的时候方便了解是啥的，今后统一用```<!-- {{comment_content}} -->```写，就不要暴露出来给解析脚本的时候添麻烦了。已有的存量代码逐步实行更改。
