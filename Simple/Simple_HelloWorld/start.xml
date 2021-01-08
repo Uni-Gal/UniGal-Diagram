@@ -1,0 +1,20 @@
+<node>
+  <identification>
+    <name>
+      start
+    </name>
+  </identification>
+  <description>
+    开始
+  </description>
+  <type>
+    <start>
+      yes<!--其实和OSM一样填Yes也是可以的，但如果具体一点就这样写第一周目开局或者写数字1也是可以的（受了osm的影响），有更高的上限和更低的下限-->
+    </start>
+  </type>
+  <nextlist>
+    <next>
+      plot
+    </next>
+  </nextlist>
+</node>

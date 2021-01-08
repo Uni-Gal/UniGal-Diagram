@@ -1,0 +1,20 @@
+<node>
+  <identification>
+    <name>
+      plot
+    </name>
+  </identification>
+  <description>
+    剧情
+  </description>
+  <nextlist>
+    <next>
+      end
+    </next>
+  </nextlist>
+  <sourcelist>
+    <source>
+      start
+    </source>
+  </sourcelist>
+</node>

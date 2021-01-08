@@ -15,10 +15,10 @@
       //是第几周目
     </start>
     <end>
-      
+      //是哪个结局
     </end>
     <label>
-      
+      //可以不填，代表是普通的节点
     </label>
     <switch>
       <condiation>
@@ -48,6 +48,7 @@
     <next>
       //下一节点名字/uuid,如果该节点type不为switch则只看第一个
     </next>
+	//只有end才可以没有next
   </nextlist>
   <sourcelist>
     <source>
@@ -56,6 +57,7 @@
     <source>
       //上一节点名字/uuid,如果loop为false则只看第一个
     </source>
+	//只有start才可以没有source
   </sourcelist>
   <addtional><!--以下均为选加，也可以需要啥加啥-->
     <comment>
