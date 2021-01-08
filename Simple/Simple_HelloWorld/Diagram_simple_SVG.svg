@@ -1,6 +1,9 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
-"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!DOCTYPE svg PUBLIC 
+  "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+>
 
 <!-- 
 
@@ -13,25 +16,162 @@ start.unigal
 -->
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+
   <!-- Element:background -->
-  <rect x="0" y="0" width="320" height="650" style="fill:rgb(239,239,239)"/>
+  <rect 
+    x="0" 
+	y="0" 
+	width="320" 
+	height="650" 
+    style=
+	"
+	      fill:rgb(239,239,239)
+	"
+  />
+  
   <!-- Element:frame -->
-  <rect x="10" y="10" width="300" height="630" rx="20" ry="20" style="fill:rgb(255,255,255);stroke-width:2.8;stroke:rgb(21,21,21);fill-opacity:0.01;"/>
+  <rect 
+    x="10" 
+	y="10" 
+	width="300" 
+	height="630" 
+	rx="20" 
+	ry="20" 
+	style=
+	"
+	  fill:rgb(255,255,255);
+	  stroke-width:2.8;
+	  stroke:rgb(21,21,21);
+	  fill-opacity:0.01;
+	"
+  />
+  
   <!-- Node:start -->
   <!-- x=10+40 y=10+40 cx=x+rx cy=y+ry 220*70 -->
-  <ellipse cx="160" cy="85" rx="110" ry="35" style="fill:rgb(255,255,255);stroke-width:2;stroke:rgb(0,0,0)"/>
-  <text x="140" y="90" fill="red">开始</text>
+  <ellipse 
+    cx="160" 
+	cy="85" 
+	rx="110" 
+	ry="35" 
+	style=
+	"
+	  fill:rgb(255,255,255);
+	  stroke-width:2;
+	  stroke:rgb(0,0,0)
+	"
+  />
+  <text 
+    x="140" 
+	y="90" 
+	fill="red" 
+	font-size="20" 
+	font-family="SimHei"
+  >
+  开始
+  </text>
+  
   <!-- Node:plot -->
   <!-- x=10+40 y=290 220*70 -->
-  <rect x="50" y="290" width="220" height="70" style="fill:rgb(255,255,255);stroke-width:2;stroke:rgb(0,0,0);"/>
-  <text x="140" y="330" fill="black">剧情</text>
+  <rect 
+    x="50" 
+	y="290" 
+	width="220" 
+	height="70" 
+	style=
+	"
+	  fill:rgb(255,255,255);
+	  stroke-width:2;
+	  stroke:rgb(0,0,0);
+	"
+  />
+  <text 
+    x="140" 
+	y="330" 
+	fill="black" 
+	font-size="20" 
+	font-family="SimHei"
+  >
+  剧情
+  </text>
+  
   <!-- Node:end -->
-  <ellipse cx="160" cy="565" rx="110" ry="35" style="fill:rgb(255,255,255);stroke-width:2;stroke:rgb(0,0,0)"/>
-  <text x="140" y="570" fill="red">结局</text>
+  <ellipse
+    cx="160" 
+	cy="565" 
+	rx="110" 
+	ry="35" 
+	style=
+	"
+	  fill:rgb(255,255,255);
+	  stroke-width:2;
+	  stroke:rgb(0,0,0)
+	"
+  />
+  <text 
+    x="140" 
+	y="570" 
+	fill="red" 
+	font-size="20" 
+	font-family="SimHei"
+  >
+  结局
+  </text>
+  
   <!-- Arrow:start -> plot -->
-  <polyline points="160,130 160,280" style="fill:none;stroke:black;stroke-width:1.8" />
-  <polyline points="150,270 160,280 170,270" style="fill:none;stroke:black;stroke-width:1.8" />
+  <polyline
+    points=
+	"
+	  160,130
+	  160,280
+	"
+	style=
+	"
+	  fill:none;
+	  stroke:black;
+	  stroke-width:1.8
+	"
+  />
+  <polyline
+    points=
+	"
+	  150,270
+	  160,280
+	  170,270
+	"
+	style=
+	"
+	  fill:none;
+	  stroke:black;
+	  stroke-width:1.8
+	"
+  />
+  
   <!-- Arrow:plot -> end -->
-  <polyline points="160,370 160,520" style="fill:none;stroke:black;stroke-width:1.8" />
-  <polyline points="150,510 160,520 170,510" style="fill:none;stroke:black;stroke-width:1.8" />
+  <polyline
+    points=
+	"
+	  160,370
+	  160,520
+	" 
+	style=
+	"
+	  fill:none;
+	  stroke:black;
+	  stroke-width:1.8
+	"
+  />
+  <polyline
+    points=
+	"
+	  150,510
+	  160,520
+	  170,510
+	" 
+	style=
+	"
+	  fill:none;
+	  stroke:black;
+	  stroke-width:1.8
+	"
+  />
 </svg>
