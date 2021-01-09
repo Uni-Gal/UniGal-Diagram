@@ -75,3 +75,19 @@ for i in filelist:
 满足这三点，就可以构建一个UniGal-Diagram的渲染器。
 
 我们正试图使用pugixml和C++开发后端，~~并前后不分离（不来回传数据了好不容易读取了）的用SDL或EasyX或其他直接面向位图操作的库绘制。并最终保存为位图~~现在打算存成SVG了。
+
+## 展望
+
+因为是SVG，所以是支持和[wenyan-lang](https://github.com/wenyan-lang/wenyan)那样直接通过SVG作为输入数据还原成节点格式的可能性的。
+
+可以参考[本文件](https://raw.githubusercontent.com/wenyan-lang/wenyan/827feb62f40c156cb2dc6881544eba1a81ef3551/renders/mandelbrot.svg)作为实例。若要该图像的查看代码需要点击[这里](https://github.com/wenyan-lang/wenyan/blob/master/renders/mandelbrot.svg)
+
+![](https://raw.githubusercontent.com/wenyan-lang/wenyan/827feb62f40c156cb2dc6881544eba1a81ef3551/renders/mandelbrot.svg)
+
+wenyan-lang实现的效果如上所述
+
+不过,就我们的项目而言，如果需要反向转换为Node节点，需要使用[svgpp](https://github.com/svgpp/svgpp)作为支持，【解析】SVG。
+
+当然后端推荐还是使用pugixml，您可以替换成其他xml后端库
+
+不过，就本项目的由数据生成SVG的过程而言，我们没有打算使用其他更复杂的手段，直接用类似cgi的方式硬输出就是可以的。虽然是重复造轮子，但是这个轮子非常小，并且直接使用svgpp这样的svg解析库是写不出这么json风格的XML来的（笑）
