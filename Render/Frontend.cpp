@@ -45,7 +45,7 @@ string argv_viewBox()
 	return viewBox;
 }
 
-int main(void)
+int main_Frontend(void)
 {
 	fstream IO_FILE;
 	IO_FILE.open("simple.svg", ios::out);
