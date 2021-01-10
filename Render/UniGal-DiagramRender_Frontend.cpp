@@ -4,6 +4,7 @@
 
 #include "Arrow.h"
 #include "Node.h"
+#include "Point.h"
 
 using namespace std;
 

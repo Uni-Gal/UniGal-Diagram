@@ -1,5 +1,7 @@
 #include <algorithm>
 #include <vector>
+#include "Point.h"
+
 
 using namespace std;
 
@@ -32,14 +34,22 @@ public:
 	int IdentificationType = NODE_IDENTIFICATION_NAME;
 	int isInLoop = 0;
 	//SVG INFO
-	int leftupx = 0;
-	int leftupy = 0;
+	////NUMRIC
 	int width = 0;
 	int higth = 0;
-	int centerx = 0;
-	int centery = 0;
 	int radiusx = 0;
 	int radiusy = 0;
+	////POINT
+	int leftupx = 0;
+	int leftupy = 0;
+	/*
+	Point Leftup;
+	*/
+	int centerx = 0;
+	int centery = 0;
+	/*
+	Point Center;
+	*/
 	//FUNCTION
 	Node();
 	Node(int x, int y, int w, int h, int Shape);//For Rect
@@ -65,6 +75,20 @@ Node::Node(int x, int y, int w, int h,int Shape)
 	this->radiusy = higth / 2;
 	this->centerx = this->leftupx + this->radiusx;
 	this->centery = this->leftupy + this->radiusy;
+	//提供一种基于点对的写法，目前Node中的关键点暂不使用Point对象表示，只在箭头用，但不排除未来可能。
+	/*
+	this->Shape = NODE_SHAPE_RECT;
+	//VITAL
+	this->Leftup.x = x;
+	this->Leftup.y = y;
+	this->width = w;
+	this->higth = h;
+	//OPTIONAL
+	this->radiusx = width / 2;
+	this->radiusy = higth / 2;
+	this->Center.x = this->Leftup.x + this->radiusx;
+	this->Center.y = this->Leftup.y + this->radiusy;
+	*/
 }
 
 Node::Node(int cx, int cy, int rx, int ry)

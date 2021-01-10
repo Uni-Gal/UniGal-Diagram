@@ -1,3 +1,9 @@
+#include <algorithm>
+#include <vector>
+#include "Point.h"
+
+using namespace std;
+
 #pragma once
 
 class Arrow
@@ -5,9 +11,11 @@ class Arrow
 public:
 	Arrow();
 	~Arrow();
-
-private:
-
+	//Line Main;
+	//Line Left;
+	//Line Right;
+	Line Body;
+	Line Head;
 };
 
 Arrow::Arrow()
@@ -15,5 +23,21 @@ Arrow::Arrow()
 }
 
 Arrow::~Arrow()
+{
+}
+
+class Line
+{
+public:
+	PointList Route;
+	Line();
+	~Line();
+};
+
+Line::Line()
+{
+}
+
+Line::~Line()
 {
 }
