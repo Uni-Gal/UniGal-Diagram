@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="UniGal-DiagramRender.cpp">
+    <ClCompile Include="UniGal-DiagramRender_Frontend.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

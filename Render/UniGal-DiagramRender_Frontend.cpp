@@ -3,6 +3,36 @@
 
 using namespace std;
 
+string spaceLevel(int num)
+{
+	if (num <= 0)
+	{
+		return "";
+	}
+	else if (num > 0)
+	{
+		string singalSpaceLevel = "  ";
+		string polySpaceLevel;
+		if (num == 1)
+		{
+			polySpaceLevel = singalSpaceLevel;
+			return polySpaceLevel;
+		}
+		else
+		{
+			polySpaceLevel = singalSpaceLevel;
+			for (int i = 1; i <= num; ++i)
+			{
+				polySpaceLevel = polySpaceLevel + singalSpaceLevel;
+			}
+		}
+	}
+	else
+	{
+		return "<!-- LEVEL_ERROR -->";
+	}
+}
+
 int main(void)
 {
 	fstream IO_FILE;
@@ -17,8 +47,19 @@ int main(void)
 	IO_FILE << ">";// << endl;
 
 	//NODELIST
+	IO_FILE << "<!--" << endl << endl;
+	IO_FILE << "Node-list" << endl << endl;
+	////FILENAME
+	IO_FILE << "-->" << endl << endl;
 
 	//SVG
+
+	////SVGHEADER
+	IO_FILE << "<!--" << endl << endl;
+	////SVGCONTENT
+
+	////SVGTAIL
+	IO_FILE << "</svg>" << endl << endl;
 
 	return 0;
 }
