@@ -21,6 +21,11 @@
   <ItemGroup>
     <ClCompile Include="UniGal-DiagramRender_Frontend.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arrow.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Point.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{8121448A-7A85-429F-BBAA-4B82FE11C08E}</ProjectGuid>
