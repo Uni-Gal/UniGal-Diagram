@@ -2,6 +2,9 @@
 #include <fstream>
 #include <string>
 
+#include "Arrow.h"
+#include "Node.h"
+
 using namespace std;
 
 string spaceLevel(int num)
@@ -35,6 +38,12 @@ string spaceLevel(int num)
 	}
 }
 
+string argv_viewBox()
+{
+	string viewBox;
+	return viewBox;
+}
+
 int main(void)
 {
 	fstream IO_FILE;
@@ -66,9 +75,9 @@ int main(void)
 	////SVGHEADER
 	deepth += 1;
 	IO_FILE << "<svg" << endl;
-	IO_FILE << spaceLevel(deepth) << "viewBox=" <</*argv(viewBox)*/"" << endl;
-	IO_FILE << spaceLevel(deepth) << "xmlns=" <</*static string*/"" << endl;
-	IO_FILE << spaceLevel(deepth) << "version=" <</*static string*/"" << endl;
+	IO_FILE << spaceLevel(deepth) << "viewBox=" << "\"" << argv_viewBox() << "\"" << endl;
+	IO_FILE << spaceLevel(deepth) << "xmlns=" << "\"" << "http://www.w3.org/2000/svg" << "\"" << endl;
+	IO_FILE << spaceLevel(deepth) << "version=" << "\"" << "1.1" << "\"" << endl;
 	IO_FILE << ">" << endl;
 	deepth -= 1;
 	////SVGCONTENT
