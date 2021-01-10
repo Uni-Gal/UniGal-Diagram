@@ -5,3 +5,4 @@ Render/Release
 *.ipch
 *.pch
 *.suo
+Render/simple.svg
