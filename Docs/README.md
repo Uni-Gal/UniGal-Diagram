@@ -97,3 +97,15 @@ wenyan-lang实现的效果如上所述
 不过我们的样式表并不会沿用前端css语法。本项目中已经很广泛的使用XML作为数据交换文件，因此样式表也将采用xml来定义。
 
 此外，渲染所使用的样式表后缀和节点文件的后缀均为unigal，在统计Nodelist的时候会被一并统计进去，因此Nodelist总是会多一个样式文件。为确定样式文件的唯一性，每次编译时需要有且只有一个样式文件，【暂定，以后也可能改】必须命名为```StyleSheet.unigal```，并且根节点必须为```<stylesheet>```。否则应当给予```No StyleSheet found```报错处理。
+
+
+
+如果想要在网页前端里面找到一个渲染器的话，可以考虑以下几个项目，都是基于js/ts的，都是前端壬。
+
+https://github.com/adrai/flowchart.js
+
+https://github.com/bramp/js-sequence-diagrams  可以直出SVG
+
+https://github.com/graphql-editor/diagram  有节点的概念
+
+https://github.com/bpmn-io/diagram-js

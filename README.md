@@ -34,3 +34,6 @@ UniGal-Diagram的目标，正是构建一套能描述绝大多数Galgame的游�
 4.UUID用UUID5这样的基于hash的是最好，但是如果要现场生成我也不反对。不过在技术力不够的时候直接name判定也可以
 
 5.即日起，UniGal的给电脑看的需要展示出来的注释用```<comment></comment>```封装，给人看的纯粹开发的时候方便了解是啥的，今后统一用```<!-- {{comment_content}} -->```写，就不要暴露出来给解析脚本的时候添麻烦了。已有的存量代码逐步实行更改。
+
+6.关于渲染后端问题，如果不想用我们默认的渲染器的话，可以考虑向我们提供一份python的parser然后调用这个python的流程图库绘制。库的名字是[mingrammer/diagrams](https://github.com/mingrammer/diagrams)。（果然干这个的都是diagram）。虽然是非常专门用来画网络架构图的，但是我想也是有素材的，魔改后也不是不可以用于其他流程图的绘制。关于它的绘图思想我们会慢慢学习。关于他的介绍文章可以看[这篇](https://mp.weixin.qq.com/s/IuZ7ihksOGzgpLTKqKcw1Q
+)国内的文章。
