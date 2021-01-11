@@ -1,5 +1,4 @@
-#include <algorithm>
-#include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -26,22 +25,5 @@ Point::Point(int X, int Y)
 }
 
 Point::~Point()
-{
-}
-
-class PointList
-{
-public:
-	int num;
-	vector<Point> Points;
-	PointList();
-	~PointList();
-};
-
-PointList::PointList()
-{
-}
-
-PointList::~PointList()
 {
 }
