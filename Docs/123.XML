@@ -1,0 +1,66 @@
+<stylesheet>
+  <text>
+    <text-font-size>
+      <!--字号-->
+      <!--为int型整数-->
+    </text-font-size>
+    <text-font-family>
+      <!--字体-->
+      <!--为string-->
+    </text-font-family>
+    <text-bold>
+      <!--加粗-->
+      <!--为bool变量-->
+    </text-bold>
+    <text-italic>
+      <!--倾斜-->
+      <!--为bool变量-->
+    </text-italic>
+    <text-shadow>
+      <!--阴影-->
+      <!--为bool变量-->
+    </text-shadow>
+    <text-color>
+      <!--颜色-->
+      <!--为rgb(r,g,b)或rgba(r,g,b,a)-->
+    </text-color>
+    <text-opacity>
+      <!--透明度-->
+      <!--为0.00~1.00的浮点数-->
+    </text-opacity>
+  </text>
+  <node>
+    <node-round-size>
+      <!--多大圆角-->
+    </node-round-size>
+    <fillcolor>
+      
+    </fillcolor>
+    <linecolor>
+      
+    </linecolor>
+    <linewidth>
+      
+    </linewidth>
+    <xsize>
+      
+    </xsize>
+    <ysize>
+      
+    </ysize>
+    <transparent-fill>
+      
+    </transparent-fill>
+    <t9t-line>
+      
+    </t9t-line>
+  </node>
+  <arrow>
+    <arrow-width>
+      
+    </arrow-width>
+    <arrow-roundhead>
+      
+    </arrow-roundhead>
+  </arrow>
+</stylesheet>
