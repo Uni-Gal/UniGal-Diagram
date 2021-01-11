@@ -1,6 +1,74 @@
-unigal通过看跟节点来判断是什么类型的文件
-——这句话回头写进script主文档里
-
-等docs的stylesheet文档写好后，xml格式化好后
-按照之前helloworld的svg的各种样式把它填起来，就是填空题了
-这样我们就有默认样式了，之前的图就是按照默认样式来得了
+<?xml version="1.0" encoding="utf-8"?>
+<!--style:default-->
+<stylesheet>
+  <background>
+    <background-exist>
+	  true
+    </background-exist>
+    <background-fillcolor>
+      rgb(239,239,239)
+    </background-fillcolor>
+    <background-fillopacity>
+      1.00
+    </background-fillopacity>
+  </background>
+  <frame>
+    <frame-exist>
+	  true
+    </frame-exist>
+    <frame-x-border>
+      10
+    </frame-x-border>
+    <frame-y-border>
+      10
+    </frame-y-border>
+    <frame-fillcolor>
+      rgb(255,255,255)
+    </frame-fillcolor>
+    <frame-strokecolor>
+      rgb(21,21,21)
+    </frame-strokecolor>
+    <frame-fillopacity>
+      0.01
+    </frame-fillopacity>
+    <frame-strokeopacity>
+      1.00
+    </frame-strokeopacity>
+    <frame-strokewidth>
+      2.8
+    </frame-strokewidth>
+  </frame>
+  <node>
+    <node-fillcolor>
+      rgb(255,255,255)
+    </node-fillcolor>
+    <node-strokecolor>
+      rgb(21,21,21)
+    </node-strokecolor>
+    <node-fillopacity>
+      0.01
+    </node-fillopacity>
+    <node-strokeopacity>
+      1.00
+    </node-strokeopacity>
+    <node-strokewidth>
+      2.8
+    </node-strokewidth>
+  </node>
+  <text>
+    <text-font-size>
+	  20
+    </text-font-size>
+    <text-font-family>
+	  SimHei
+    </text-font-family>
+	<text-color>
+	  rgb(0,0,0)
+    </text-color>
+  </text>
+  <arrow>
+    <arrow-width>
+	  1.8
+    </arrow-width>
+  </arrow>
+</stylesheet>
