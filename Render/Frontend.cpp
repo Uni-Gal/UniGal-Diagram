@@ -5,8 +5,13 @@
 #include "Arrow.h"
 #include "Node.h"
 #include "Point.h"
+#include "Text.h"
+
+#include "UniGal-DiagramRender.cpp"
 
 using namespace std;
+
+extern fstream IO_FILE;
 
 string spaceLevel(int num)
 {
@@ -47,7 +52,6 @@ string argv_viewBox()
 
 int main_Frontend(void)
 {
-	fstream IO_FILE;
 	IO_FILE.open("simple.svg", ios::out);
 	
 	int deepth = 0;

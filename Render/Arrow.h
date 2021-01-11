@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <vector>
+
 #include "Point.h"
 
 using namespace std;

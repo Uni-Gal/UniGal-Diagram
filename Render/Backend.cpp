@@ -3,7 +3,6 @@
 #include <string>
 #include <algorithm>
 
-#include "Arrow.h"
 #include "Node.h"
 #include "Point.h"
 

@@ -1,14 +1,14 @@
 #include <algorithm>
 #include <vector>
-#include "Point.h"
 
+#include "Point.h"
 
 using namespace std;
 
 #pragma once
 
 #define NODE_SHAPE_RECT 11 //矩形
-#define NODE_SHAPE_ECLIPSE 12 //椭圆
+#define NODE_SHAPE_ELLIPSE 12 //椭圆
 #define NODE_SHAPE_PARALLELOGRAM 13 //平行四边形
 #define NODE_SHAPE_DIAMOND 14 //菱形
 
@@ -52,8 +52,7 @@ public:
 	*/
 	//FUNCTION
 	Node();
-	Node(int x, int y, int w, int h, int Shape);//For Rect
-	Node(int cx, int cy, int rx, int ry, int Shape);//For eclipse
+	Node(int argv_a, int argv_b, int argv_c, int argv_d, int Shape);//For Rect & ellipse
 	~Node();
 	void Draw();
 };
@@ -62,56 +61,70 @@ Node::Node()
 {
 }
 
-Node::Node(int x, int y, int w, int h,int Shape)
+Node::Node(int argv_a, int argv_b, int argv_c, int argv_d, int Shape)
 {
-	this->Shape = NODE_SHAPE_RECT;
-	//VITAL
-	this->leftupx = x;
-	this->leftupy = y;
-	this->width = w;
-	this->higth = h;
-	//OPTIONAL
-	this->radiusx = width / 2;
-	this->radiusy = higth / 2;
-	this->centerx = this->leftupx + this->radiusx;
-	this->centery = this->leftupy + this->radiusy;
-	//提供一种基于点对的写法，目前Node中的关键点暂不使用Point对象表示，只在箭头用，但不排除未来可能。
-	/*
-	this->Shape = NODE_SHAPE_RECT;
-	//VITAL
-	this->Leftup.x = x;
-	this->Leftup.y = y;
-	this->width = w;
-	this->higth = h;
-	//OPTIONAL
-	this->radiusx = width / 2;
-	this->radiusy = higth / 2;
-	this->Center.x = this->Leftup.x + this->radiusx;
-	this->Center.y = this->Leftup.y + this->radiusy;
-	*/
-}
+	//一个重载当两个用，我他妈真是天（sha）才（bi）
+	if (Shape == NODE_SHAPE_RECT)//For Rect
+	{
+		//Trans argument
+		int x = argv_a;
+		int y = argv_b;
+		int w = argv_c;
+		int h = argv_d;
 
-Node::Node(int cx, int cy, int rx, int ry)
-{
-	this->Shape = NODE_SHAPE_ECLIPSE;
-	//VITAL
-	this->centerx = cx;
-	this->centery = cy;
-	this->radiusx = rx;
-	this->radiusy = ry;
-	//OPTIONAL
-	this->width = radiusx * 2;
-	this->higth = radiusy * 2;
-	this->leftupx = centerx - radiusx;
-	this->leftupy = centery - radiusy;
-}
+		//Node::Node(int x, int y, int w, int h)
+		this->Shape = NODE_SHAPE_RECT;
+		//VITAL
+		this->leftupx = x;
+		this->leftupy = y;
+		this->width = w;
+		this->higth = h;
+		//OPTIONAL
+		this->radiusx = width / 2;
+		this->radiusy = higth / 2;
+		this->centerx = this->leftupx + this->radiusx;
+		this->centery = this->leftupy + this->radiusy;
+		//提供一种基于点对的写法，目前Node中的关键点暂不使用Point对象表示，只在箭头用，但不排除未来可能。
+		/*
+		this->Shape = NODE_SHAPE_RECT;
+		//VITAL
+		this->Leftup.x = x;
+		this->Leftup.y = y;
+		this->width = w;
+		this->higth = h;
+		//OPTIONAL
+		this->radiusx = width / 2;
+		this->radiusy = higth / 2;
+		this->Center.x = this->Leftup.x + this->radiusx;
+		this->Center.y = this->Leftup.y + this->radiusy;
+		*/
+	}
+	else if (Shape == NODE_SHAPE_RECT)//For ellipse
+	{
+		//Trans argument
+		int cx = argv_a;
+		int cy = argv_b;
+		int rx = argv_c;
+		int ry = argv_d;
 
-/*
-if(Shape==NODE_SHAPE_RECT)
-Node(rect)
-else
-Node(eclipse)
-*/
+		//Node::Node(int cx, int cy, int rx, int ry)
+		this->Shape = NODE_SHAPE_ELLIPSE;
+		//VITAL
+		this->centerx = cx;
+		this->centery = cy;
+		this->radiusx = rx;
+		this->radiusy = ry;
+		//OPTIONAL
+		this->width = radiusx * 2;
+		this->higth = radiusy * 2;
+		this->leftupx = centerx - radiusx;
+		this->leftupy = centery - radiusy;
+	}
+	else
+	{
+		exit(0);
+	}
+}
 
 Node::~Node()
 {

@@ -99,6 +99,14 @@
       <!--透明度-->
       <!--为0.00~1.00的浮点数-->
     </text-opacity>
+    <text-color-start>
+      <!--type=start的节点的颜色-->
+      <!--为rgb(r,g,b)-->
+    </text-color-start>
+    <text-color-end>
+      <!--type=end的节点的颜色-->
+      <!--为rgb(r,g,b)-->
+    </text-color-end>
   </text>
   <arrow>
     <!--需要在当前的实现的样式-->

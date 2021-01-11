@@ -19,12 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="UniGal-DiagramRender_Frontend.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Arrow.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Text.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Backend.cpp" />
+    <ClCompile Include="Frontend.cpp" />
+    <ClCompile Include="UniGal-DiagramRender.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
