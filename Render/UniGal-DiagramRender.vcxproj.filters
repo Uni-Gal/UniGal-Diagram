@@ -33,6 +33,12 @@
     <ClInclude Include="Style.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="pugiconfig.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pugixml.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Backend.cpp">
@@ -42,6 +48,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="UniGal-DiagramRender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StylePicker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pugixml.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

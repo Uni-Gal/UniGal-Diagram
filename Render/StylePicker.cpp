@@ -3,6 +3,8 @@
 #include <string>
 #include <algorithm>
 
+#include "Style.h"
+#include "Color.h"
 #include "pugixml.hpp"
 
 using namespace std;
@@ -16,21 +18,28 @@ string FormatString(string str)
 	return str;
 }
 
-int StylePicker(int argc, char *argv[])
+int StylePicker(Style StyleSheet)
 {
 	pugi::xml_document STYLE_FILE;
 	pugi::xml_parse_result result = STYLE_FILE.load_file("StyleSheet.unigal");
-	string src = FormatString(STYLE_FILE.select_single_node("/unigal-script/head/src/text()").node().value());
-	string dst = FormatString(STYLE_FILE.select_single_node("/unigal-script/head/dst/text()").node().value());
-	string ver = FormatString(STYLE_FILE.select_single_node("/unigal-script/head/ver/text()").node().value());
-	cout << "[src=" << src << "]" << endl;
-	cout << "[dst=" << dst << "]" << endl;
-	cout << "[ver=" << ver << "]" << endl;
-	cout << "开始解析脚本，若需要编译成目标语言则输入1，不需要编译成目标语言则输入0" << endl;
-	int flag_complier = 0;
-	cin >> flag_complier;
-	ofstream objectfile;
+	string background_exist_str = FormatString(STYLE_FILE.select_single_node("/stylesheet/background/background-exist/text()").node().value());
+	string background_fillcolor_str = FormatString(STYLE_FILE.select_single_node("/stylesheet/background/background-fillcolor/text()").node().value());
+	string background_opacity_str = FormatString(STYLE_FILE.select_single_node("/stylesheet/background/background-fillopacity/text()").node().value());
+	cout << "[background_exist_str] = [" << background_exist_str << "]" << endl;
+	cout << "[background_fillcolor_str] = [" << background_fillcolor_str << "]" << endl;
+	cout << "[background_opacity_str] = [" << background_opacity_str << "]" << endl;
+	
+	bool background_exist_bool;
+	Color background_fillcolor_color;
+	float background_opacity_float;
+	//转换为对应类型
+	//写入
+	StyleSheet.setBackgroundStyle(background_exist_bool, background_fillcolor_color, background_opacity_float);
 
+
+	//重复多次，先读后写，直到把背景、框架、节点、文字，箭头全都读取成功。
+
+	cout << "开始解析脚本，若需要编译成目标语言则输入1，不需要编译成目标语言则输入0" << endl;
 
 	return 0;
 }

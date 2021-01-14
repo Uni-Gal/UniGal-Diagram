@@ -23,12 +23,16 @@
     <ClInclude Include="Color.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="pugiconfig.hpp" />
+    <ClInclude Include="pugixml.hpp" />
     <ClInclude Include="Style.h" />
     <ClInclude Include="Text.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Backend.cpp" />
     <ClCompile Include="Frontend.cpp" />
+    <ClCompile Include="pugixml.cpp" />
+    <ClCompile Include="StylePicker.cpp" />
     <ClCompile Include="UniGal-DiagramRender.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
