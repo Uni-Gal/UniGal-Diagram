@@ -9,11 +9,9 @@ using namespace std;
 class Text
 {
 public:
+	string NodeName;
 	Text();
 	~Text();
-
-private:
-
 };
 
 Text::Text()
