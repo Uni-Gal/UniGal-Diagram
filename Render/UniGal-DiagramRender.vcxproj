@@ -20,8 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arrow.h" />
+    <ClInclude Include="Color.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Style.h" />
     <ClInclude Include="Text.h" />
   </ItemGroup>
   <ItemGroup>
