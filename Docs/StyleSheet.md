@@ -34,6 +34,12 @@
     <frame-y-border>
       <!--Y方向距viewBox的边距-->
     </frame-y-border>
+    <frame-x-radius>
+      <!--X方向角半径-->
+    </frame-x-radius>
+    <frame-y-radius>
+      <!--Y方向角半径-->
+    </frame-y-radius>
     <frame-fillcolor>
       <!--填充色-->
     </frame-fillcolor>

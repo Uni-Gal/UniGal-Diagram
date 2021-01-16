@@ -19,6 +19,8 @@ public:
 	bool frame_exist = false;
 	int frame_x_border = 0;
 	int frame_y_border = 0;
+	float frame_x_radius = 0;
+	float frame_y_radius = 0;
 	Color frame_fillcolor;
 	Color frame_strokecolor;
 	float frame_fillopacity = 1.00;

@@ -64,11 +64,12 @@ public:
 	}
 };
 
+viewBox SVG;
+
 string argv_viewBox()
 {
 	string argv_viewBox = "";
 	{
-		viewBox SVG;
 		//argv_viewBox = argv_viewBox + SVG.L + "," + SVG.U + "," + SVG.R + "," + SVG.D;
 	}
 	return argv_viewBox;
@@ -142,7 +143,6 @@ int main_Frontend(void)
 			//是固定原点故硬编码(0,0)点
 			cout << spaceLevel(deepth) << "x=\"" << "0" << "\"" << endl;
 			cout << spaceLevel(deepth) << "y=\"" << "0" << "\"" << endl;
-			viewBox SVG;
 			cout << spaceLevel(deepth) << "width=\"" << SVG.R << "\"" << endl;
 			cout << spaceLevel(deepth) << "height=\"" << SVG.D << "\"" << endl;
 
@@ -181,19 +181,20 @@ int main_Frontend(void)
 		{
 			cout << spaceLevel(deepth) << "x=\"" << "0" << "\"" << endl;
 			cout << spaceLevel(deepth) << "y=\"" << "0" << "\"" << endl;
-			cout << spaceLevel(deepth) << "width=\"" << "0" << "\"" << endl;
-			cout << spaceLevel(deepth) << "height=\"" << "0" << "\"" << endl;
-			cout << spaceLevel(deepth) << "rx=\"" << "0" << "\"" << endl;
-			cout << spaceLevel(deepth) << "ry=\"" << "0" << "\"" << endl;
+			cout << spaceLevel(deepth) << "width=\"" << SVG.R - 2 * StyleSheet.frame_x_border << "\"" << endl;
+			cout << spaceLevel(deepth) << "height=\"" << SVG.D - 2 * StyleSheet.frame_y_border << "\"" << endl;
+			cout << spaceLevel(deepth) << "rx=\"" << StyleSheet.frame_x_radius << "\"" << endl;
+			cout << spaceLevel(deepth) << "ry=\"" << StyleSheet.frame_y_radius << "\"" << endl;
 
 			cout << spaceLevel(deepth) << "style=" << endl;
 			cout << spaceLevel(deepth) << "\"" << endl;
 			deepth += 1;
 			{
-				cout << spaceLevel(deepth) << "fill:rgb(" << StyleSheet.background_fillcolor.R << "," << StyleSheet.background_fillcolor.G << "," << StyleSheet.background_fillcolor.B << ")" << endl;
-				//
-				//
-				//
+				cout << spaceLevel(deepth) << "fill:rgb(" << StyleSheet.frame_fillcolor.R << "," << StyleSheet.frame_fillcolor.G << "," << StyleSheet.frame_fillcolor.B << ")" << endl;
+				cout << spaceLevel(deepth) << "stroke-width:" << StyleSheet.frame_strokewidth << endl;
+				cout << spaceLevel(deepth) << "fill:rgb(" << StyleSheet.frame_strokecolor.R << "," << StyleSheet.frame_strokecolor.G << "," << StyleSheet.frame_strokecolor.B << ")" << endl;
+				cout<< spaceLevel(deepth) <<"fill-opacity:" << StyleSheet.frame_fillopacity << endl;
+				cout << spaceLevel(deepth) << "stroke-opacity:" << StyleSheet.frame_strokeopacity << endl;
 			}
 			deepth -= 1;
 			cout << spaceLevel(deepth) << "\"" << endl;
