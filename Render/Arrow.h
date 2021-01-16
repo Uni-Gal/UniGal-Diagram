@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <vector>
 
-#include "Point.h"
+#include "Line.h"
 
 using namespace std;
 
@@ -21,21 +21,5 @@ Arrow::Arrow()
 }
 
 Arrow::~Arrow()
-{
-}
-
-class Line
-{
-public:
-	vector<Point> Route;
-	Line();
-	~Line();
-};
-
-Line::Line()
-{
-}
-
-Line::~Line()
 {
 }

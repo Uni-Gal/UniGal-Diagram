@@ -113,11 +113,12 @@ int main_Frontend(void)
 			cout << spaceLevel(deepth) << "y=\"" << "0" << "\"" << endl;
 			cout << spaceLevel(deepth) << "width=\"" << "0" << "\"" << endl;
 			cout << spaceLevel(deepth) << "height=\"" << "0" << "\"" << endl;
+
 			cout << spaceLevel(deepth) << "style=" << endl;
 			cout << spaceLevel(deepth) << "\"" << endl;
 			deepth += 1;
 			{
-
+				cout << spaceLevel(deepth) << "fill:rgb(" << StyleSheet.background_fillcolor.R << "," << StyleSheet.background_fillcolor.G << "," << StyleSheet.background_fillcolor.B << ")" << endl;
 			}
 			deepth -= 1;
 			cout << spaceLevel(deepth) << "\"" << endl;
@@ -141,6 +142,31 @@ int main_Frontend(void)
 	{
 		//有边框
 		//需要绘制边框
+		cout << spaceLevel(deepth) << "<!-- Element:background -->" << endl;
+		cout << spaceLevel(deepth) << "<rect" << endl;
+		deepth += 1;
+		{
+			cout << spaceLevel(deepth) << "x=\"" << "0" << "\"" << endl;
+			cout << spaceLevel(deepth) << "y=\"" << "0" << "\"" << endl;
+			cout << spaceLevel(deepth) << "width=\"" << "0" << "\"" << endl;
+			cout << spaceLevel(deepth) << "height=\"" << "0" << "\"" << endl;
+			cout << spaceLevel(deepth) << "rx=\"" << "0" << "\"" << endl;
+			cout << spaceLevel(deepth) << "ry=\"" << "0" << "\"" << endl;
+
+			cout << spaceLevel(deepth) << "style=" << endl;
+			cout << spaceLevel(deepth) << "\"" << endl;
+			deepth += 1;
+			{
+				cout << spaceLevel(deepth) << "fill:rgb(" << StyleSheet.background_fillcolor.R << "," << StyleSheet.background_fillcolor.G << "," << StyleSheet.background_fillcolor.B << ")" << endl;
+				//
+				//
+				//
+			}
+			deepth -= 1;
+			cout << spaceLevel(deepth) << "\"" << endl;
+		}
+		deepth -= 1;
+		cout << spaceLevel(deepth) << "/>" << endl;
 	}
 	else if (StyleSheet.frame_exist == false)
 	{

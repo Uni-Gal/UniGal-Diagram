@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Arrow.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Line.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="pugiconfig.hpp" />
