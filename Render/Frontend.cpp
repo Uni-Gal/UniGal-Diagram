@@ -46,10 +46,24 @@ string spaceLevel(int num)
 	}
 }
 
+typedef viewBox struct
+{
+	int L;
+	int U;
+	int R;
+	int D;
+};
+
 string argv_viewBox()
 {
 	string viewBox;
 	return viewBox;
+}
+
+string argv_background_style_fill_rgb()
+{
+	string str;
+	return str;
 }
 
 int main_Frontend(void)
