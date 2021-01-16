@@ -46,24 +46,41 @@ string spaceLevel(int num)
 	}
 }
 
-typedef viewBox struct
+class viewBox
 {
-	int L;
-	int U;
-	int R;
-	int D;
+public:
+	//VITAL
+	int L = 0;
+	int U = 0;
+	int R = 320;
+	int D = 650;
+	//FUNCTION
+	void setViewBox(int L, int U, int R, int D)
+	{
+		this->L = L;
+		this->U = U;
+		this->R = R;
+		this->D = D;
+	}
 };
 
 string argv_viewBox()
 {
-	string viewBox;
-	return viewBox;
+	string argv_viewBox = "";
+	{
+		viewBox SVG;
+		//argv_viewBox = argv_viewBox + SVG.L + "," + SVG.U + "," + SVG.R + "," + SVG.D;
+	}
+	return argv_viewBox;
 }
 
 string argv_background_style_fill_rgb()
 {
-	string str;
-	return str;
+	string argv_background_style_fill_rgb = "";
+	{
+		;
+	}
+	return argv_background_style_fill_rgb;
 }
 
 int main_Frontend(void)
@@ -125,14 +142,16 @@ int main_Frontend(void)
 			//是固定原点故硬编码(0,0)点
 			cout << spaceLevel(deepth) << "x=\"" << "0" << "\"" << endl;
 			cout << spaceLevel(deepth) << "y=\"" << "0" << "\"" << endl;
-			cout << spaceLevel(deepth) << "width=\"" << "0" << "\"" << endl;
-			cout << spaceLevel(deepth) << "height=\"" << "0" << "\"" << endl;
+			viewBox SVG;
+			cout << spaceLevel(deepth) << "width=\"" << SVG.R << "\"" << endl;
+			cout << spaceLevel(deepth) << "height=\"" << SVG.D << "\"" << endl;
 
 			cout << spaceLevel(deepth) << "style=" << endl;
 			cout << spaceLevel(deepth) << "\"" << endl;
 			deepth += 1;
 			{
 				cout << spaceLevel(deepth) << "fill:rgb(" << StyleSheet.background_fillcolor.R << "," << StyleSheet.background_fillcolor.G << "," << StyleSheet.background_fillcolor.B << ")" << endl;
+				//准备后续完善后改成cout << spaceLevel(deepth) << "fill:rgb(" << argv_background_style_fill_rgb() << ")" << endl;
 			}
 			deepth -= 1;
 			cout << spaceLevel(deepth) << "\"" << endl;
