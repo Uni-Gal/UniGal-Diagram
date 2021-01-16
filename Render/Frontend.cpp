@@ -113,7 +113,14 @@ int main_Frontend(void)
 			cout << spaceLevel(deepth) << "y=\"" << "0" << "\"" << endl;
 			cout << spaceLevel(deepth) << "width=\"" << "0" << "\"" << endl;
 			cout << spaceLevel(deepth) << "height=\"" << "0" << "\"" << endl;
-			cout<<spaceLevel
+			cout << spaceLevel(deepth) << "style=" << endl;
+			cout << spaceLevel(deepth) << "\"" << endl;
+			deepth += 1;
+			{
+
+			}
+			deepth -= 1;
+			cout << spaceLevel(deepth) << "\"" << endl;
 		}
 		deepth -= 1;
 		cout << spaceLevel(deepth) << "/>" << endl;
