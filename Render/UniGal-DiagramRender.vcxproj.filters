@@ -39,9 +39,6 @@
     <ClInclude Include="pugixml.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Nodelist.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Backend.cpp">
@@ -59,5 +56,13 @@
     <ClCompile Include="pugixml.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StyleSheet.unigal">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="DependencyTree.md">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

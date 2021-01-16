@@ -12,9 +12,6 @@ class Arrow
 public:
 	Arrow();
 	~Arrow();
-	//Line Main;
-	//Line Left;
-	//Line Right;
 	Line Body;
 	Line Head;
 };
@@ -30,7 +27,7 @@ Arrow::~Arrow()
 class Line
 {
 public:
-	PointList Route;
+	vector<Point> Route;
 	Line();
 	~Line();
 };

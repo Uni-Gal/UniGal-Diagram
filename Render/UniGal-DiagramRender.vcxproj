@@ -22,7 +22,6 @@
     <ClInclude Include="Arrow.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Node.h" />
-    <ClInclude Include="Nodelist.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="pugiconfig.hpp" />
     <ClInclude Include="pugixml.hpp" />
@@ -35,6 +34,10 @@
     <ClCompile Include="pugixml.cpp" />
     <ClCompile Include="StylePicker.cpp" />
     <ClCompile Include="UniGal-DiagramRender.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DependencyTree.md" />
+    <None Include="StyleSheet.unigal" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
