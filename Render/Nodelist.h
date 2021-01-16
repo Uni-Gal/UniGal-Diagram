@@ -1,16 +1,16 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <algorithm>
 
-#include "Node.h"
-#include "Point.h"
+//#include "Node.h"
 
 using namespace std;
 
 #pragma once
 
-int main_Backend(void)
+class Nodelist//:public Node
 {
-	return 0;
-}
+public:
+	int NodeNum;
+	//vector<Node> Nodes;
+};

@@ -14,9 +14,6 @@
 
 using namespace std;
 
-fstream IO_FILE;
-fstream STYLE_FILE;
-
 int main(int argc, char *argv[])
 {
 	main_Backend();

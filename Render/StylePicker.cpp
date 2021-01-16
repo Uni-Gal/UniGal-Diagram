@@ -9,7 +9,9 @@
 
 using namespace std;
 
-fstream STYLE_FILE;
+#pragma once
+
+extern fstream STYLE_FILE;
 
 string FormatString(string str)
 {

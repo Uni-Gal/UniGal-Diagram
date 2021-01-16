@@ -7,9 +7,9 @@
 #include "Point.h"
 #include "Text.h"
 
-#include "UniGal-DiagramRender.cpp"
-
 using namespace std;
+
+#pragma once
 
 extern fstream IO_FILE;
 

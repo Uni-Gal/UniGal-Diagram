@@ -3,6 +3,8 @@
 
 #include "Point.h"
 
+//#include "Nodelist.h"
+
 using namespace std;
 
 #pragma once
@@ -28,8 +30,10 @@ public:
 	int Shape= NODE_SHAPE_RECT;
 	int type = NODE_TYPE_LABEL;
 	string Comment;
-	Nodelist SourceList;
-	Nodelist NextList;
+	//Nodelist SourceList;
+	//Nodelist NextList;
+	vector<Node> SourceList;
+	vector<Node> NextList;
 	string Identification;
 	int IdentificationType = NODE_IDENTIFICATION_NAME;
 	int isInLoop = 0;
@@ -136,10 +140,3 @@ void Node::Draw()
 	//但是一般不应直接调用对象来绘制，建议只使用对象来获取指定的参数填充进主函数的fstream流中，由流来完成。
 	//但是如果考虑到每个节点的固定格式，其实可以调用Draw，但是为了应对各种情况，最好多提供几个可选参数。
 }
-
-class Nodelist
-{
-public:
-	int NodeNum;
-	vector<Node> Nodes;
-};
