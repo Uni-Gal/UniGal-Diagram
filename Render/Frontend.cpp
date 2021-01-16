@@ -152,6 +152,10 @@ int main_Frontend(void)
 			{
 				cout << spaceLevel(deepth) << "fill:rgb(" << StyleSheet.background_fillcolor.R << "," << StyleSheet.background_fillcolor.G << "," << StyleSheet.background_fillcolor.B << ")" << endl;
 				//准备后续完善后改成cout << spaceLevel(deepth) << "fill:rgb(" << argv_background_style_fill_rgb() << ")" << endl;
+				if (abs(StyleSheet.background_opacity - 1.00) <= 0.001)
+				{
+					cout << spaceLevel(deepth) << "fill-opacity:" << StyleSheet.background_opacity << endl;
+				}
 			}
 			deepth -= 1;
 			cout << spaceLevel(deepth) << "\"" << endl;
@@ -175,7 +179,7 @@ int main_Frontend(void)
 	{
 		//有边框
 		//需要绘制边框
-		cout << spaceLevel(deepth) << "<!-- Element:background -->" << endl;
+		cout << spaceLevel(deepth) << "<!-- Element:frame -->" << endl;
 		cout << spaceLevel(deepth) << "<rect" << endl;
 		deepth += 1;
 		{
@@ -193,8 +197,14 @@ int main_Frontend(void)
 				cout << spaceLevel(deepth) << "fill:rgb(" << StyleSheet.frame_fillcolor.R << "," << StyleSheet.frame_fillcolor.G << "," << StyleSheet.frame_fillcolor.B << ")" << endl;
 				cout << spaceLevel(deepth) << "stroke-width:" << StyleSheet.frame_strokewidth << endl;
 				cout << spaceLevel(deepth) << "fill:rgb(" << StyleSheet.frame_strokecolor.R << "," << StyleSheet.frame_strokecolor.G << "," << StyleSheet.frame_strokecolor.B << ")" << endl;
-				cout<< spaceLevel(deepth) <<"fill-opacity:" << StyleSheet.frame_fillopacity << endl;
-				cout << spaceLevel(deepth) << "stroke-opacity:" << StyleSheet.frame_strokeopacity << endl;
+				if (abs(StyleSheet.frame_fillopacity - 1.00) <= 0.001)
+				{
+					cout << spaceLevel(deepth) << "fill-opacity:" << StyleSheet.frame_fillopacity << endl;
+				}
+				if (abs(StyleSheet.frame_strokeopacity - 1.00) <= 0.001)
+				{
+					cout << spaceLevel(deepth) << "stroke-opacity:" << StyleSheet.frame_strokeopacity << endl;
+				}
 			}
 			deepth -= 1;
 			cout << spaceLevel(deepth) << "\"" << endl;
@@ -215,7 +225,32 @@ int main_Frontend(void)
 	}
 	//////NODE
 
+	typedef struct NodePosition
+	{
+		string NodeName;
+		Node Nodeatthis;
+		Point Position;
+	}NodePosition;
+	//该结构体将被Node和Text的绘制过程调用，也会被Arrow的过程拿来计算，可以说是后面三部分的共有的了。
+
+	int Num_Node;
+	//重头戏：计算Node的数量和位置。
+	//首先Node应该分成多个层次，至少分为start的周目一行，然后end的结局一行，中间的若干个行另外记。
+	int Num_Node_Startline;//start行的Node数量
+	int Num_Node_Endline;//end行的Node数量
+	int Num_Node_Plotheight;//plot行深度是多少
+	int Num_Node_Plotwide_Max;
+	int Num_Node_Plotwide_Min;
+	vector<int> Num_Node_PlotwideList;
+	//以上信息应该由后端读取后产生，然后包括节点位置在内，不应该由前端部分计算，应由后端部分计算。这些的定义应该放进main函数去做，并传递给前端。留待后续优化
+
+	//////TEXT
+	int Num_Text;
+	//重头戏：文字的位置需要沿用上文的Node的位置.
+
 	//////ARROW
+	int Num_Arrow;
+	//重头戏：根据获取到的Node的位置坐标和Node对象里面获取到的高度等信息，推算不同线段的起始点和终点，然后根据这些来绘图。
 
 	deepth -= 1;
 
