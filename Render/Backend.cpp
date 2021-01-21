@@ -26,7 +26,7 @@ int main_Backend(void)
 		pugi::xml_document temp;
 		DIAGRAM_FILE_LIST.push_back(temp);
 	}
-	vector<string> DIAGRAM_FILENAME_LIST;
+	vector<char[10000]> DIAGRAM_FILENAME_LIST;
 	vector<pugi::xml_parse_result> DIAGRAM_RESULT;
 	for (iterator_i = 0; iterator_i < Num_Node; ++iterator_i)
 	{
