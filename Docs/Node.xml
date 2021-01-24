@@ -58,14 +58,22 @@
 	//只有start才可以没有source
   </sourcelist>
   <addtional><!--以下均为选加，也可以需要啥加啥-->
-    <comment>
-      /**/
-    </comment>
     <image>
-      
+      <!--允许节点包含一张图片，在render中会直接以图片代替节点-->
     </image>
-    <default_status>
-      
-    </default_status>
+    <statuslist>
+      <!--允许条件构建的type、nextlist、sourcelist-->
+	  <!--条件构建的时候，会优先使用条件中的，只有不满足任何一个条件的时候，才会使用节点default的（但是得有）-->
+	  <!--（本条作废，因为不打算引入关键字，想保证文件名暂无限制）条件编译的节点可以单独分成若干个文件，也可以部分独立出去，也可以完全写在同一文件内。但是独立出去的，前缀必须是主文件的名称加下划线-->
+    </statuslist>
+	<statusnodedata>
+	  <status name="SSR">
+	    <type></type>
+		<nextlist></nextlist>
+		<sourcelist></sourcelist>
+	  </status>
+	  <status name="S">
+	  </status>
+	</statusnodedata>
   </addtional>
 </node>
