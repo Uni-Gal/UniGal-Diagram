@@ -43,4 +43,10 @@ UniGal-Diagram的目标，正是构建一套能描述绝大多数Galgame的游�
 
 Docs是纯粹两个XML的模板，不存在i18n问题，标签虽然是英文但是已经应该做到了自注释了，希望不存在歧义和理解困难。
 
-Simple是用自然语言描写的具体的剧本场景问题，这个可能存在一定的需要localization的东西，但是我们目前仅提供中文，欢迎大家积极提供译文，谢谢。
+Simple是用自然语言描写的具体的剧本场景问题，这个可能存在一定的需要localization的东西，但是我们目前仅提供中文，欢迎大家积极提供译文，谢谢。(尽管如此，文件夹也是建好了)
+
+| LanguageCode | LanguageName        | SimplePath   |
+| ------------ | ------------------- | ------------ |
+| en_UK        | Traditional English | Simple/en_UK |
+| zh_CN        | 简体中文            | Simple/zh_CN |
+
