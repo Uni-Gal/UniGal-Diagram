@@ -59,7 +59,8 @@
   </sourcelist>
   <addtional><!--以下均为选加，也可以需要啥加啥-->
     <image>
-      <!--允许节点包含一张图片，在render中会直接以图片代替节点-->
+      <!--允许节点包含一张图片，在render中会直接以图片代替节点，路径的写法应按照Script中的路径写法-->
+      <!--https://github.com/Uni-Gal/UniGal-Script/blob/master/Docs/zh_CN/UniGal-filesystem.md-->
     </image>
     <statuslist>
       <!--允许条件构建的type、nextlist、sourcelist-->
