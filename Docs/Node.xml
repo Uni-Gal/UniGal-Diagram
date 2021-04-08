@@ -29,7 +29,7 @@
         //填写这个分支的进入条件,顺序和nextlist里面一致
       </condiation>
     </switch>
-    <action operation="add"><!--此外还有sub,multiply,divide,square,not-->
+    <action operation="add"><!--此外还有sub,multiply,divide,square,set-->
       <var>
         //变量名，类型只有unsigned long long int，包括bool在内也是int。需要浮点的自行除100或者更多。
 		//在第一次使用变量的时候需要先声明，声明变量的时候操作类型是malloc
